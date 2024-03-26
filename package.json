@@ -1,0 +1,15 @@
+{
+  "name": "tidal-musicstats",
+  "version": "0.0.1",
+  "description": "retrieve statistics from tidal api",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davis Tardif",
+  "license": "ISC",
+  "dependencies": {
+    "ky": "^1.2.3"
+  }
+}
