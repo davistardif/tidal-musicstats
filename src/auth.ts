@@ -1,5 +1,5 @@
 import ky from 'ky';
-import { clientId, clientSecret } from './secrets.js'
+import { clientId, clientSecret } from '../secrets.js'
 
 const tidalAuthURL = "https://auth.tidal.com/v1/oauth2/token"
 
@@ -18,7 +18,7 @@ async function refreshToken(): Promise<void> {
   _token = json['access_token'];
 }
 
-async function getToken(forceRefresh = false): Promise<string> {
+export async function getToken(forceRefresh = false): Promise<string> {
   if (forceRefresh || _token === "") {
     await refreshToken();
   }
